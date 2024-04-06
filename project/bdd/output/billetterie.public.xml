@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><database name="billetterie" schema="public" type="PostgreSQL - 16.2 (Debian 16.2-1.pgdg120+2)">
+   <sequences>
+      <sequence increment="1" name="envoi_mail_id_envoi_seq" startValue="1"/>
+      <sequence increment="1" name="evenement_id_evenement_seq" startValue="1"/>
+      <sequence increment="1" name="reservation_id_reservation_seq" startValue="1"/>
+      <sequence increment="1" name="utilisateur_id_utilisateur_seq" startValue="1"/>
+   </sequences>
+   <tables>
+      <table name="envoi_mail" remarks="Table des envois de mails" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('envoi_mail_id_envoi_seq'::regclass)" digits="0" id="0" name="id_envoi" nullable="false" remarks="Identifiant de l'envoi de mail" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="id_utilisateur" nullable="false" remarks="Identifiant de l'utilisateur destinataire" size="10" type="int4" typeCode="4">
+            <parent column="id_utilisateur" foreignKey="envoi_mail_id_utilisateur_fkey" implied="false" onDeleteCascade="false" schema="public" table="utilisateur"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="contenu" nullable="true" remarks="Contenu du mail envoyé" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="3" name="date_envoi" nullable="false" remarks="Date d'envoi du mail" size="29" type="timestamp" typeCode="93"/>
+         <primaryKey column="id_envoi" sequenceNumberInPK="1"/>
+         <index name="envoi_mail_pkey" unique="true">
+            <column ascending="true" name="id_envoi"/>
+         </index>
+      </table>
+      <table name="evenement" remarks="Table des événements" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('evenement_id_evenement_seq'::regclass)" digits="0" id="0" name="id_evenement" nullable="false" remarks="Identifiant de l'événement" size="10" type="serial" typeCode="4">
+            <child column="id_evenement" foreignKey="reservation_id_evenement_fkey" implied="false" onDeleteCascade="false" schema="public" table="reservation"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="nom" nullable="false" remarks="Nom de l'événement" size="100" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="2" name="date_debut" nullable="false" remarks="Date de début de l'événement" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="3" name="date_fin" nullable="false" remarks="Date de fin de l'événement" size="29" type="timestamp" typeCode="93"/>
+         <primaryKey column="id_evenement" sequenceNumberInPK="1"/>
+         <index name="evenement_pkey" unique="true">
+            <column ascending="true" name="id_evenement"/>
+         </index>
+      </table>
+      <table name="reservation" remarks="Table des réservations" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('reservation_id_reservation_seq'::regclass)" digits="0" id="0" name="id_reservation" nullable="false" remarks="Identifiant de la réservation" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="id_utilisateur" nullable="false" remarks="Identifiant de l'utilisateur faisant la réservation" size="10" type="int4" typeCode="4">
+            <parent column="id_utilisateur" foreignKey="reservation_id_utilisateur_fkey" implied="false" onDeleteCascade="false" schema="public" table="utilisateur"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="id_evenement" nullable="false" remarks="Identifiant de l'événement réservé" size="10" type="int4" typeCode="4">
+            <parent column="id_evenement" foreignKey="reservation_id_evenement_fkey" implied="false" onDeleteCascade="false" schema="public" table="evenement"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="nombre_tickets" nullable="false" remarks="Nombre de tickets réservés" size="10" type="int4" typeCode="4"/>
+         <primaryKey column="id_reservation" sequenceNumberInPK="1"/>
+         <index name="reservation_pkey" unique="true">
+            <column ascending="true" name="id_reservation"/>
+         </index>
+      </table>
+      <table name="utilisateur" remarks="Table des utilisateurs" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('utilisateur_id_utilisateur_seq'::regclass)" digits="0" id="0" name="id_utilisateur" nullable="false" remarks="Identifiant de l'utilisateur" size="10" type="serial" typeCode="4">
+            <child column="id_utilisateur" foreignKey="envoi_mail_id_utilisateur_fkey" implied="false" onDeleteCascade="false" schema="public" table="envoi_mail"/>
+            <child column="id_utilisateur" foreignKey="reservation_id_utilisateur_fkey" implied="false" onDeleteCascade="false" schema="public" table="reservation"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="login" nullable="false" remarks="Login de l'utilisateur" size="100" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="mail" nullable="false" remarks="Mail de l'utilisateur" size="100" type="varchar" typeCode="12"/>
+         <primaryKey column="id_utilisateur" sequenceNumberInPK="1"/>
+         <index name="utilisateur_pkey" unique="true">
+            <column ascending="true" name="id_utilisateur"/>
+         </index>
+      </table>
+   </tables>
+</database>

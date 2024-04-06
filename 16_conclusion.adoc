@@ -1,0 +1,29 @@
+== Conclusion
+
+[.notes]
+--
+* je terminerai sur les *autres bénéfices* d'utiliser un template :
+** *homogénéité* = on retrouve les *mêmes infos au même endroit*
+** *guide* donc pas d'oubli
+** évite le *syndrôme de la page blanche*
+** moins de charge mentale
+* j'espère en tous cas vous avoir donné envie d'essayer
+--
+
+[.columns.is-vcentered]
+=== Merci
+
+[.column]
+image::images/qr-code-github.svg[width=60%]
+
+[.colmun]
+icon:github[] @dlucasd
+
+[.column]
+image::images/qr-code-feedback.svg[width=60%]
+
+[.notes]
+--
+https://app.voxxr.in/events/devoxxfr2024/rate-talk/12552
+https://github.com/dlucasd/la-doc-va-bien-ne-t-en-fais-pas
+--

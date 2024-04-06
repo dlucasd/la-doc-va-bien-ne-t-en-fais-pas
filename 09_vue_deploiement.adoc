@@ -1,0 +1,31 @@
+== 7. Vue déploiement
+
+[%notitle.part7]
+=== Contenu
+
+* Description de l'infrastructure technique.
+* Correspondance avec les briques logicielles.
+
+[.notes]
+--
+* emplacement géographique, serveurs, processeurs, réseaux
+--
+
+[%notitle.part7]
+=== C4 Diagramme de déploiement
+
+[.img-radius]
+image::images/deployment.png[width=80%]
+
+[%notitle.part7]
+=== Autres déploiements ?
+
+[.step]
+* Kubernetes ? [.fragment.green]#_k8sviz, KubeView_#
+* Docker Compose ? [.fragment.green]#_docker-compose-diagram, docker-compose-viz_#
+
+[.notes]
+--
+* fonctionnent mais pas forcément maintenus
+* rappel, open source : vous pouvez contribuer
+--

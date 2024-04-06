@@ -1,0 +1,896 @@
+{
+  "configuration" : { },
+  "description" : "Exemple de workspace pour montrer quelques fonctionnalités de Structurizr.",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-javascript",
+  "lastModifiedDate" : "2024-04-10T20:52:47Z",
+  "model" : {
+    "deploymentNodes" : [ {
+      "children" : [ {
+        "children" : [ {
+          "containerInstances" : [ {
+            "containerId" : "6",
+            "deploymentGroups" : [ "Default" ],
+            "environment" : "Env de developpement",
+            "id" : "41",
+            "instanceId" : 1,
+            "properties" : {
+              "structurizr.dsl.identifier" : "devwebappinstance"
+            },
+            "tags" : "Container Instance"
+          }, {
+            "containerId" : "7",
+            "deploymentGroups" : [ "Default" ],
+            "environment" : "Env de developpement",
+            "id" : "42",
+            "instanceId" : 1,
+            "properties" : {
+              "structurizr.dsl.identifier" : "devapirestinstance"
+            },
+            "relationships" : [ {
+              "description" : "Lecture / Ecriture",
+              "destinationId" : "45",
+              "id" : "46",
+              "linkedRelationshipId" : "32",
+              "sourceId" : "42",
+              "technology" : "SQL/TCP"
+            }, {
+              "description" : "Appels API",
+              "destinationId" : "49",
+              "id" : "50",
+              "linkedRelationshipId" : "35",
+              "sourceId" : "42",
+              "technology" : "JSON/HTTPS"
+            }, {
+              "description" : "Envoi de mails",
+              "destinationId" : "53",
+              "id" : "54",
+              "linkedRelationshipId" : "37",
+              "sourceId" : "42"
+            } ],
+            "tags" : "Container Instance"
+          } ],
+          "environment" : "Env de developpement",
+          "id" : "40",
+          "instances" : "1",
+          "name" : "Apache Tomcat",
+          "properties" : {
+            "structurizr.dsl.identifier" : "a9b7f547-0cf6-4a07-9225-768d312cac0b"
+          },
+          "tags" : "Element,Deployment Node",
+          "technology" : "Apache Tomcat 11.x"
+        } ],
+        "environment" : "Env de developpement",
+        "id" : "39",
+        "instances" : "1",
+        "name" : "Conteneur Docker - Serveur Web",
+        "properties" : {
+          "structurizr.dsl.identifier" : "b2d41fed-e766-481d-b3bf-7e94516cd1b1"
+        },
+        "tags" : "Element,Deployment Node",
+        "technology" : "Docker"
+      } ],
+      "environment" : "Env de developpement",
+      "id" : "38",
+      "instances" : "1",
+      "name" : "VM 10.11.12.13",
+      "properties" : {
+        "structurizr.dsl.identifier" : "34290178-670b-4514-bdab-3c446788c9a3"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "RHEL7"
+    }, {
+      "children" : [ {
+        "containerInstances" : [ {
+          "containerId" : "15",
+          "deploymentGroups" : [ "Default" ],
+          "environment" : "Env de developpement",
+          "id" : "45",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "devdbinstance"
+          },
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Env de developpement",
+        "id" : "44",
+        "instances" : "1",
+        "name" : "Database Server",
+        "properties" : {
+          "structurizr.dsl.identifier" : "1cfecb7c-8545-4fb9-8330-ef1be76f45bc"
+        },
+        "tags" : "Element,Deployment Node",
+        "technology" : "PostgreSQL 16"
+      } ],
+      "environment" : "Env de developpement",
+      "id" : "43",
+      "instances" : "1",
+      "name" : "VM 10.11.12.14",
+      "properties" : {
+        "structurizr.dsl.identifier" : "61d879f3-0541-40d6-bb8d-f28e6cb4904c"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "RHEL7"
+    }, {
+      "children" : [ {
+        "environment" : "Env de developpement",
+        "id" : "48",
+        "instances" : "1",
+        "name" : "fake-paiement.acme.com",
+        "properties" : {
+          "structurizr.dsl.identifier" : "12a55b14-cda2-4174-8c27-9e2f2d14d661"
+        },
+        "softwareSystemInstances" : [ {
+          "deploymentGroups" : [ "Default" ],
+          "environment" : "Env de developpement",
+          "id" : "49",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "f16e971a-53a7-4364-b3b5-45cdfb2f0830"
+          },
+          "softwareSystemId" : "2",
+          "tags" : "Software System Instance"
+        } ],
+        "tags" : "Element,Deployment Node"
+      } ],
+      "environment" : "Env de developpement",
+      "id" : "47",
+      "instances" : "1",
+      "name" : "Acme",
+      "properties" : {
+        "structurizr.dsl.identifier" : "02c0fd60-429c-467a-9577-feb4bb67338f"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "DataCenter Acme"
+    }, {
+      "children" : [ {
+        "environment" : "Env de developpement",
+        "id" : "52",
+        "instances" : "1",
+        "name" : "sandbox-dev.mail.com",
+        "properties" : {
+          "structurizr.dsl.identifier" : "0300afdf-e664-4dfc-8c2d-08211d3c0959"
+        },
+        "softwareSystemInstances" : [ {
+          "deploymentGroups" : [ "Default" ],
+          "environment" : "Env de developpement",
+          "id" : "53",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "aac2ec25-ae89-4f83-9faa-f19d069fe27b"
+          },
+          "softwareSystemId" : "3",
+          "tags" : "Software System Instance"
+        } ],
+        "tags" : "Element,Deployment Node"
+      } ],
+      "environment" : "Env de developpement",
+      "id" : "51",
+      "instances" : "1",
+      "name" : "Mail",
+      "properties" : {
+        "structurizr.dsl.identifier" : "4348bebe-0330-4461-9d36-17533a4ee61f"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "DataCenter Mail"
+    } ],
+    "people" : [ {
+      "description" : "Utilisateur souhaitant acheter des billets pour les JO.",
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Client",
+      "properties" : {
+        "structurizr.dsl.identifier" : "client"
+      },
+      "relationships" : [ {
+        "description" : "Commande de billets",
+        "destinationId" : "4",
+        "id" : "16",
+        "properties" : {
+          "structurizr.dsl.identifier" : "038f32a5-9b6e-4699-99e6-9c2b5c5f4d40"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Visite le site de la billetterie",
+        "destinationId" : "6",
+        "id" : "20",
+        "properties" : {
+          "structurizr.dsl.identifier" : "62f56a56-a7bd-43df-8a47-bc0ed58b7359"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship",
+        "technology" : "HTTPS"
+      }, {
+        "description" : "Commande de billets",
+        "destinationId" : "5",
+        "id" : "21",
+        "properties" : {
+          "structurizr.dsl.identifier" : "261a8e84-7bb9-4e2d-b175-889725ba5ea5"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person,Customer"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "Gère les transactions financières.",
+      "documentation" : { },
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Système de paiement",
+      "properties" : {
+        "structurizr.dsl.identifier" : "paiement"
+      },
+      "tags" : "Element,Software System,Existing System"
+    }, {
+      "description" : "Gère l'envoi de billets.",
+      "documentation" : { },
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Système de messagerie",
+      "properties" : {
+        "structurizr.dsl.identifier" : "mail"
+      },
+      "relationships" : [ {
+        "description" : "Envoi de mails",
+        "destinationId" : "1",
+        "id" : "19",
+        "properties" : {
+          "structurizr.dsl.identifier" : "9f151b64-4bcf-4607-bd9e-a0e7283b9791"
+        },
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System,Existing System"
+    }, {
+      "containers" : [ {
+        "description" : "Fournit toutes les fonctionnalités de la billetterie par Internet aux clients via leur navigateur web.",
+        "documentation" : { },
+        "id" : "5",
+        "name" : "Single-Page Application",
+        "properties" : {
+          "structurizr.dsl.identifier" : "spa"
+        },
+        "relationships" : [ {
+          "description" : "Appels API",
+          "destinationId" : "8",
+          "id" : "23",
+          "properties" : {
+            "structurizr.dsl.identifier" : "3e0c3556-5d34-43f0-9583-7fcae5edd22f"
+          },
+          "sourceId" : "5",
+          "tags" : "Relationship",
+          "technology" : "JSON/HTTPS"
+        }, {
+          "description" : "Appels API",
+          "destinationId" : "7",
+          "id" : "24",
+          "linkedRelationshipId" : "23",
+          "sourceId" : "5",
+          "technology" : "JSON/HTTPS"
+        }, {
+          "description" : "Appels API",
+          "destinationId" : "9",
+          "id" : "25",
+          "properties" : {
+            "structurizr.dsl.identifier" : "6d75b616-3f86-448f-b8b8-463afa3234ef"
+          },
+          "sourceId" : "5",
+          "tags" : "Relationship",
+          "technology" : "JSON/HTTPS"
+        }, {
+          "description" : "Appels API",
+          "destinationId" : "10",
+          "id" : "26",
+          "properties" : {
+            "structurizr.dsl.identifier" : "e1d36105-f7eb-4ea8-8a77-b1477a7100f4"
+          },
+          "sourceId" : "5",
+          "tags" : "Relationship",
+          "technology" : "JSON/HTTPS"
+        } ],
+        "tags" : "Element,Container,Web Browser",
+        "technology" : "JavaScript et Angular"
+      }, {
+        "description" : "Fournit le contenu statique et la SPA.",
+        "documentation" : { },
+        "id" : "6",
+        "name" : "Web Application",
+        "properties" : {
+          "structurizr.dsl.identifier" : "webapplication"
+        },
+        "relationships" : [ {
+          "description" : "Délivre au navigateur web du client",
+          "destinationId" : "5",
+          "id" : "22",
+          "properties" : {
+            "structurizr.dsl.identifier" : "6ecbc17f-6cdd-4f89-bebf-b825047715c0"
+          },
+          "sourceId" : "6",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java et Spring MVC"
+      }, {
+        "components" : [ {
+          "description" : "Permet aux utilisateurs de s'authentifier.",
+          "documentation" : { },
+          "id" : "8",
+          "name" : "User Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "usercontroller"
+          },
+          "relationships" : [ {
+            "description" : "Utilise",
+            "destinationId" : "11",
+            "id" : "27",
+            "properties" : {
+              "structurizr.dsl.identifier" : "eb200dac-7a0b-4964-a522-2ba300df80ad"
+            },
+            "sourceId" : "8",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Spring MVC Rest Controller"
+        }, {
+          "description" : "Permet aux utilisateurs d'effectuer des réservations.",
+          "documentation" : { },
+          "id" : "9",
+          "name" : "Réservation Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reservationcontroller"
+          },
+          "relationships" : [ {
+            "description" : "Utilise",
+            "destinationId" : "12",
+            "id" : "28",
+            "properties" : {
+              "structurizr.dsl.identifier" : "55d48556-8e35-41a9-b237-740769367868"
+            },
+            "sourceId" : "9",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Utilise",
+            "destinationId" : "13",
+            "id" : "29",
+            "properties" : {
+              "structurizr.dsl.identifier" : "997d144b-fd24-42d2-9107-0e66a49b440d"
+            },
+            "sourceId" : "9",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Spring MVC Rest Controller"
+        }, {
+          "description" : "Permet aux utilisateurs de rechercher des événements.",
+          "documentation" : { },
+          "id" : "10",
+          "name" : "Evénement Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "evenementcontroller"
+          },
+          "relationships" : [ {
+            "description" : "Utilise",
+            "destinationId" : "14",
+            "id" : "30",
+            "properties" : {
+              "structurizr.dsl.identifier" : "634eba63-b3b9-4590-89b8-88f42bb083e0"
+            },
+            "sourceId" : "10",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Spring MVC Rest Controller"
+        }, {
+          "description" : "Fournit les fonctionnalités liés à l'authentification et à l'authorisation.",
+          "documentation" : { },
+          "id" : "11",
+          "name" : "Composant Sécurité",
+          "properties" : {
+            "structurizr.dsl.identifier" : "securitycomponent"
+          },
+          "relationships" : [ {
+            "description" : "Lecture / Ecriture",
+            "destinationId" : "15",
+            "id" : "33",
+            "properties" : {
+              "structurizr.dsl.identifier" : "5268dc1d-b198-4c2a-9ca1-cc45e4847818"
+            },
+            "sourceId" : "11",
+            "tags" : "Relationship",
+            "technology" : "SQL/TCP"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Spring Bean"
+        }, {
+          "description" : "Interface pour appeler le système de paiement.",
+          "documentation" : { },
+          "id" : "12",
+          "name" : "Interface Système Paiement",
+          "properties" : {
+            "structurizr.dsl.identifier" : "systemepaiementinterface"
+          },
+          "relationships" : [ {
+            "description" : "Appels API",
+            "destinationId" : "2",
+            "id" : "34",
+            "properties" : {
+              "structurizr.dsl.identifier" : "9ed06c18-a17e-4f90-8275-62d2013b9653"
+            },
+            "sourceId" : "12",
+            "tags" : "Relationship",
+            "technology" : "JSON/HTTPS"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Spring Bean"
+        }, {
+          "description" : "Envoi des mails aux utilisateurs.",
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Service Envoi de mails",
+          "properties" : {
+            "structurizr.dsl.identifier" : "mailservice"
+          },
+          "relationships" : [ {
+            "description" : "Envoi de mails",
+            "destinationId" : "3",
+            "id" : "36",
+            "properties" : {
+              "structurizr.dsl.identifier" : "09deb348-dae6-4926-82b4-d96c104977f4"
+            },
+            "sourceId" : "13",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Spring Bean"
+        }, {
+          "description" : "Permet d'effectuer des recherches sur les événements.",
+          "documentation" : { },
+          "id" : "14",
+          "name" : "Service Evénement",
+          "properties" : {
+            "structurizr.dsl.identifier" : "evenementservice"
+          },
+          "relationships" : [ {
+            "description" : "Lecture / Ecriture",
+            "destinationId" : "15",
+            "id" : "31",
+            "properties" : {
+              "structurizr.dsl.identifier" : "142ace25-2cfc-4b88-9a63-e0e8ce8d9250"
+            },
+            "sourceId" : "14",
+            "tags" : "Relationship",
+            "technology" : "SQL/TCP"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Spring Bean"
+        } ],
+        "description" : "Fournit les fonctionnalités de la billetterie via une API REST.",
+        "documentation" : { },
+        "id" : "7",
+        "name" : "API REST",
+        "properties" : {
+          "structurizr.dsl.identifier" : "apirest"
+        },
+        "relationships" : [ {
+          "description" : "Lecture / Ecriture",
+          "destinationId" : "15",
+          "id" : "32",
+          "linkedRelationshipId" : "31",
+          "sourceId" : "7",
+          "technology" : "SQL/TCP"
+        }, {
+          "description" : "Appels API",
+          "destinationId" : "2",
+          "id" : "35",
+          "linkedRelationshipId" : "34",
+          "sourceId" : "7",
+          "technology" : "JSON/HTTPS"
+        }, {
+          "description" : "Envoi de mails",
+          "destinationId" : "3",
+          "id" : "37",
+          "linkedRelationshipId" : "36",
+          "sourceId" : "7"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java et Spring MVC"
+      }, {
+        "description" : "Stocke les réservations, événements et envois de mails",
+        "documentation" : { },
+        "id" : "15",
+        "name" : "Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "PostgreSQL Database Schema"
+      } ],
+      "description" : "Permet d'acheter des billets pour les JO.",
+      "documentation" : { },
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "Système de billetterie",
+      "properties" : {
+        "structurizr.dsl.identifier" : "systemebilletterie"
+      },
+      "relationships" : [ {
+        "description" : "Utilise",
+        "destinationId" : "2",
+        "id" : "17",
+        "properties" : {
+          "structurizr.dsl.identifier" : "90d0b141-ce26-48c4-8211-ba470ece5819"
+        },
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Utilise",
+        "destinationId" : "3",
+        "id" : "18",
+        "properties" : {
+          "structurizr.dsl.identifier" : "f3aea48f-2d7e-40eb-9f30-43dda7e31ff0"
+        },
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Billetterie JO2024",
+  "properties" : {
+    "structurizr.dsl" : "CndvcmtzcGFjZSAiQmlsbGV0dGVyaWUgSk8yMDI0IiAiRXhlbXBsZSBkZSB3b3Jrc3BhY2UgcG91ciBtb250cmVyIHF1ZWxxdWVzIGZvbmN0aW9ubmFsaXTDqXMgZGUgU3RydWN0dXJpenIuIiB7CgogICAgbW9kZWwgewogICAgICAgIGNsaWVudCA9IHBlcnNvbiAiQ2xpZW50IiAiVXRpbGlzYXRldXIgc291aGFpdGFudCBhY2hldGVyIGRlcyBiaWxsZXRzIHBvdXIgbGVzIEpPLiIgIkN1c3RvbWVyIgoKICAgICAgICBwYWllbWVudCA9IHNvZnR3YXJlc3lzdGVtICJTeXN0w6htZSBkZSBwYWllbWVudCIgIkfDqHJlIGxlcyB0cmFuc2FjdGlvbnMgZmluYW5jacOocmVzLiIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICBtYWlsID0gc29mdHdhcmVzeXN0ZW0gIlN5c3TDqG1lIGRlIG1lc3NhZ2VyaWUiICJHw6hyZSBsJ2Vudm9pIGRlIGJpbGxldHMuIiAiRXhpc3RpbmcgU3lzdGVtIgoKICAgICAgICBzeXN0ZW1lQmlsbGV0dGVyaWUgPSBzb2Z0d2FyZXN5c3RlbSAiU3lzdMOobWUgZGUgYmlsbGV0dGVyaWUiICJQZXJtZXQgZCdhY2hldGVyIGRlcyBiaWxsZXRzIHBvdXIgbGVzIEpPLiIgewogICAgICAgICAgICBzcGEgPSBjb250YWluZXIgIlNpbmdsZS1QYWdlIEFwcGxpY2F0aW9uIiAiRm91cm5pdCB0b3V0ZXMgbGVzIGZvbmN0aW9ubmFsaXTDqXMgZGUgbGEgYmlsbGV0dGVyaWUgcGFyIEludGVybmV0IGF1eCBjbGllbnRzIHZpYSBsZXVyIG5hdmlnYXRldXIgd2ViLiIgIkphdmFTY3JpcHQgZXQgQW5ndWxhciIgIldlYiBCcm93c2VyIgogICAgICAgICAgICB3ZWJBcHBsaWNhdGlvbiA9IGNvbnRhaW5lciAiV2ViIEFwcGxpY2F0aW9uIiAiRm91cm5pdCBsZSBjb250ZW51IHN0YXRpcXVlIGV0IGxhIFNQQS4iICJKYXZhIGV0IFNwcmluZyBNVkMiCiAgICAgICAgICAgIGFwaVJlc3QgPSBjb250YWluZXIgIkFQSSBSRVNUIiAiRm91cm5pdCBsZXMgZm9uY3Rpb25uYWxpdMOpcyBkZSBsYSBiaWxsZXR0ZXJpZSB2aWEgdW5lIEFQSSBSRVNULiIgIkphdmEgZXQgU3ByaW5nIE1WQyIgewogICAgICAgICAgICAgICAgdXNlckNvbnRyb2xsZXIgPSBjb21wb25lbnQgIlVzZXIgQ29udHJvbGxlciIgIlBlcm1ldCBhdXggdXRpbGlzYXRldXJzIGRlIHMnYXV0aGVudGlmaWVyLiIgIlNwcmluZyBNVkMgUmVzdCBDb250cm9sbGVyIgogICAgICAgICAgICAgICAgcmVzZXJ2YXRpb25Db250cm9sbGVyID0gY29tcG9uZW50ICJSw6lzZXJ2YXRpb24gQ29udHJvbGxlciIgIlBlcm1ldCBhdXggdXRpbGlzYXRldXJzIGQnZWZmZWN0dWVyIGRlcyByw6lzZXJ2YXRpb25zLiIgIlNwcmluZyBNVkMgUmVzdCBDb250cm9sbGVyIgogICAgICAgICAgICAgICAgZXZlbmVtZW50Q29udHJvbGxlciA9IGNvbXBvbmVudCAiRXbDqW5lbWVudCBDb250cm9sbGVyIiAiUGVybWV0IGF1eCB1dGlsaXNhdGV1cnMgZGUgcmVjaGVyY2hlciBkZXMgw6l2w6luZW1lbnRzLiIgIlNwcmluZyBNVkMgUmVzdCBDb250cm9sbGVyIgogICAgICAgICAgICAgICAgc2VjdXJpdHlDb21wb25lbnQgPSBjb21wb25lbnQgIkNvbXBvc2FudCBTw6ljdXJpdMOpIiAiRm91cm5pdCBsZXMgZm9uY3Rpb25uYWxpdMOpcyBsacOpcyDDoCBsJ2F1dGhlbnRpZmljYXRpb24gZXQgw6AgbCdhdXRob3Jpc2F0aW9uLiIgIlNwcmluZyBCZWFuIgogICAgICAgICAgICAgICAgc3lzdGVtZVBhaWVtZW50SW50ZXJmYWNlID0gY29tcG9uZW50ICJJbnRlcmZhY2UgU3lzdMOobWUgUGFpZW1lbnQiICJJbnRlcmZhY2UgcG91ciBhcHBlbGVyIGxlIHN5c3TDqG1lIGRlIHBhaWVtZW50LiIgIlNwcmluZyBCZWFuIgogICAgICAgICAgICAgICAgbWFpbFNlcnZpY2UgPSBjb21wb25lbnQgIlNlcnZpY2UgRW52b2kgZGUgbWFpbHMiICJFbnZvaSBkZXMgbWFpbHMgYXV4IHV0aWxpc2F0ZXVycy4iICJTcHJpbmcgQmVhbiIKICAgICAgICAgICAgICAgIGV2ZW5lbWVudFNlcnZpY2UgPSBjb21wb25lbnQgIlNlcnZpY2UgRXbDqW5lbWVudCIgIlBlcm1ldCBkJ2VmZmVjdHVlciBkZXMgcmVjaGVyY2hlcyBzdXIgbGVzIMOpdsOpbmVtZW50cy4iICJTcHJpbmcgQmVhbiIKICAgICAgICAgICAgfQogICAgICAgICAgICBkYXRhYmFzZSA9IGNvbnRhaW5lciAiRGF0YWJhc2UiICJTdG9ja2UgbGVzIHLDqXNlcnZhdGlvbnMsIMOpdsOpbmVtZW50cyBldCBlbnZvaXMgZGUgbWFpbHMiICJQb3N0Z3JlU1FMIERhdGFiYXNlIFNjaGVtYSIgIkRhdGFiYXNlIgogICAgICAgIH0KCiAgICAgICAgIyByZWxhdGlvbnMKICAgICAgICBjbGllbnQgLT4gc3lzdGVtZUJpbGxldHRlcmllICJDb21tYW5kZSBkZSBiaWxsZXRzIgogICAgICAgIHN5c3RlbWVCaWxsZXR0ZXJpZSAtPiBwYWllbWVudCAiVXRpbGlzZSIKICAgICAgICBzeXN0ZW1lQmlsbGV0dGVyaWUgLT4gbWFpbCAiVXRpbGlzZSIKICAgICAgICBtYWlsIC0+IGNsaWVudCAiRW52b2kgZGUgbWFpbHMiCgogICAgICAgICMgcmVsYXRpb25zIHR5cGUgY29udGVuZXVycwogICAgICAgIGNsaWVudCAtPiB3ZWJBcHBsaWNhdGlvbiAiVmlzaXRlIGxlIHNpdGUgZGUgbGEgYmlsbGV0dGVyaWUiICJIVFRQUyIKICAgICAgICBjbGllbnQgLT4gc3BhICJDb21tYW5kZSBkZSBiaWxsZXRzIgogICAgICAgIHdlYkFwcGxpY2F0aW9uIC0+IHNwYSAiRMOpbGl2cmUgYXUgbmF2aWdhdGV1ciB3ZWIgZHUgY2xpZW50IgoKICAgICAgICAjIHJlbGF0aW9ucyB0eXBlIGNvbXBvc2FudHMKICAgICAgICBzcGEgLT4gdXNlckNvbnRyb2xsZXIgIkFwcGVscyBBUEkiICJKU09OL0hUVFBTIgogICAgICAgIHNwYSAtPiByZXNlcnZhdGlvbkNvbnRyb2xsZXIgIkFwcGVscyBBUEkiICJKU09OL0hUVFBTIgogICAgICAgIHNwYSAtPiBldmVuZW1lbnRDb250cm9sbGVyICJBcHBlbHMgQVBJIiAiSlNPTi9IVFRQUyIKICAgICAgICB1c2VyQ29udHJvbGxlciAtPiBzZWN1cml0eUNvbXBvbmVudCAiVXRpbGlzZSIKICAgICAgICByZXNlcnZhdGlvbkNvbnRyb2xsZXIgLT4gc3lzdGVtZVBhaWVtZW50SW50ZXJmYWNlICJVdGlsaXNlIgogICAgICAgIHJlc2VydmF0aW9uQ29udHJvbGxlciAtPiBtYWlsU2VydmljZSAiVXRpbGlzZSIKICAgICAgICBldmVuZW1lbnRDb250cm9sbGVyIC0+IGV2ZW5lbWVudFNlcnZpY2UgIlV0aWxpc2UiCiAgICAgICAgZXZlbmVtZW50U2VydmljZSAtPiBkYXRhYmFzZSAiTGVjdHVyZSAvIEVjcml0dXJlIiAiU1FML1RDUCIKICAgICAgICBzZWN1cml0eUNvbXBvbmVudCAtPiBkYXRhYmFzZSAiTGVjdHVyZSAvIEVjcml0dXJlIiAiU1FML1RDUCIKICAgICAgICBzeXN0ZW1lUGFpZW1lbnRJbnRlcmZhY2UgLT4gcGFpZW1lbnQgIkFwcGVscyBBUEkiICJKU09OL0hUVFBTIgogICAgICAgIG1haWxTZXJ2aWNlIC0+IG1haWwgIkVudm9pIGRlIG1haWxzIgoKICAgICAgICBkZXBsb3ltZW50RW52aXJvbm1lbnQgIkVudiBkZSBkZXZlbG9wcGVtZW50IiB7CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJWTSAxMC4xMS4xMi4xMyIgIiIgIlJIRUw3IiB7CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQ29udGVuZXVyIERvY2tlciAtIFNlcnZldXIgV2ViIiAiIiAiRG9ja2VyIiB7CiAgICAgICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkFwYWNoZSBUb21jYXQiICIiICJBcGFjaGUgVG9tY2F0IDExLngiIHsKICAgICAgICAgICAgICAgICAgICAgICAgZGV2V2ViQXBwSW5zdGFuY2UgPSBjb250YWluZXJJbnN0YW5jZSB3ZWJBcHBsaWNhdGlvbgogICAgICAgICAgICAgICAgICAgICAgICBkZXZBcGlSZXN0SW5zdGFuY2UgPSBjb250YWluZXJJbnN0YW5jZSBhcGlSZXN0CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJWTSAxMC4xMS4xMi4xNCIgIiIgIlJIRUw3IiB7CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRGF0YWJhc2UgU2VydmVyIiAiIiAiUG9zdGdyZVNRTCAxNiIgewogICAgICAgICAgICAgICAgICAgIGRldkRiSW5zdGFuY2UgPSBjb250YWluZXJJbnN0YW5jZSBkYXRhYmFzZQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJBY21lIiAiIiAiRGF0YUNlbnRlciBBY21lIiAiIiB7CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiZmFrZS1wYWllbWVudC5hY21lLmNvbSIgIiIgIiIgIiIgewogICAgICAgICAgICAgICAgICAgIHNvZnR3YXJlU3lzdGVtSW5zdGFuY2UgcGFpZW1lbnQKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiTWFpbCIgIiIgIkRhdGFDZW50ZXIgTWFpbCIgIiIgewogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgInNhbmRib3gtZGV2Lm1haWwuY29tIiAiIiAiIiAiIiB7CiAgICAgICAgICAgICAgICAgICAgc29mdHdhcmVTeXN0ZW1JbnN0YW5jZSBtYWlsCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbWNvbnRleHQgc3lzdGVtZUJpbGxldHRlcmllICJTeXN0ZW1Db250ZXh0IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhbmltYXRpb24gewogICAgICAgICAgICAgICAgc3lzdGVtZUJpbGxldHRlcmllCiAgICAgICAgICAgICAgICBjbGllbnQKICAgICAgICAgICAgICAgIHBhaWVtZW50CiAgICAgICAgICAgICAgICBtYWlsCiAgICAgICAgICAgIH0KICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgICAgICBkZXNjcmlwdGlvbiAiTGUgZGlhZ3JhbW1lIGRlIGNvbnRleHRlIHN5c3TDqG1lIGR1IHNpdGUgZGUgYmlsbGV0dGVyaWUuIgogICAgICAgIH0KCiAgICAgICAgY29udGFpbmVyIHN5c3RlbWVCaWxsZXR0ZXJpZSAiQ29udGFpbmVycyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgIyBhdXRvTGF5b3V0CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJMZSBkaWFncmFtbWUgZGUgY29udGVuZXVycyBkdSBzaXRlIGRlIGJpbGxldHRlcmllLiIKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBhcGlSZXN0ICJDb21wb25lbnRzIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJMZSBkaWFncmFtbWUgZGUgY29tcG9zYW50cyBkdSBzaXRlIGRlIGJpbGxldHRlcmllLiIKICAgICAgICB9CgogICAgICAgIGRlcGxveW1lbnQgc3lzdGVtZUJpbGxldHRlcmllICJFbnYgZGUgZGV2ZWxvcHBlbWVudCIgIkRldiIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgICAgICBkZXNjcmlwdGlvbiAiTGUgZGlhZ3JhbW1lIGRlIGTDqXBsb2llbWVudCBlbiBlbnZpcm9ubmVtZW50IGRlIGTDqXZlbG9wcGVtZW50IGR1IHNpdGUgZGUgYmlsbGV0dGVyaWUuIgogICAgICAgIH0KCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiUGVyc29uIiB7CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgICAgICBmb250U2l6ZSAyMgogICAgICAgICAgICAgICAgc2hhcGUgUGVyc29uCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ3VzdG9tZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzA4NDI3YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIlNvZnR3YXJlIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMTE2OGJkCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRXhpc3RpbmcgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzQzOGRkNQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIldlYiBCcm93c2VyIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBXZWJCcm93c2VyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ29tcG9uZW50IiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM4NWJiZjAKICAgICAgICAgICAgICAgIGNvbG9yICMwMDAwMDAKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJGYWlsb3ZlciIgewogICAgICAgICAgICAgICAgb3BhY2l0eSAyNQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQp9Cg=="
+  },
+  "views" : {
+    "componentViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "containerId" : "7",
+      "description" : "Le diagramme de composants du site de billetterie.",
+      "dimensions" : {
+        "height" : 2500,
+        "width" : 3140
+      },
+      "elements" : [ {
+        "id" : "2",
+        "x" : 1720,
+        "y" : 1999
+      }, {
+        "id" : "3",
+        "x" : 2470,
+        "y" : 1999
+      }, {
+        "id" : "5",
+        "x" : 970,
+        "y" : 199
+      }, {
+        "id" : "8",
+        "x" : 220,
+        "y" : 799
+      }, {
+        "id" : "9",
+        "x" : 1720,
+        "y" : 799
+      }, {
+        "id" : "10",
+        "x" : 970,
+        "y" : 799
+      }, {
+        "id" : "11",
+        "x" : 220,
+        "y" : 1399
+      }, {
+        "id" : "12",
+        "x" : 1720,
+        "y" : 1399
+      }, {
+        "id" : "13",
+        "x" : 2470,
+        "y" : 1399
+      }, {
+        "id" : "14",
+        "x" : 970,
+        "y" : 1399
+      }, {
+        "id" : "15",
+        "x" : 595,
+        "y" : 1999
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "Components",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "23"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "26"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "28"
+      }, {
+        "id" : "29"
+      }, {
+        "id" : "30"
+      }, {
+        "id" : "31"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "36"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "SystemContext",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : {
+        "elements" : [ {
+          "color" : "#ffffff",
+          "fontSize" : 22,
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#08427b",
+          "tag" : "Customer"
+        }, {
+          "background" : "#1168bd",
+          "color" : "#ffffff",
+          "tag" : "Software System"
+        }, {
+          "background" : "#999999",
+          "color" : "#ffffff",
+          "tag" : "Existing System"
+        }, {
+          "background" : "#438dd5",
+          "color" : "#ffffff",
+          "tag" : "Container"
+        }, {
+          "shape" : "WebBrowser",
+          "tag" : "Web Browser"
+        }, {
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        }, {
+          "background" : "#85bbf0",
+          "color" : "#000000",
+          "tag" : "Component"
+        }, {
+          "opacity" : 25,
+          "tag" : "Failover"
+        } ]
+      },
+      "terminology" : { }
+    },
+    "containerViews" : [ {
+      "description" : "Le diagramme de conteneurs du site de billetterie.",
+      "dimensions" : {
+        "height" : 3320,
+        "width" : 2316
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 208,
+        "y" : 808
+      }, {
+        "id" : "2",
+        "x" : 1658,
+        "y" : 2708
+      }, {
+        "id" : "3",
+        "x" : 883,
+        "y" : 208
+      }, {
+        "id" : "5",
+        "x" : 908,
+        "y" : 1508
+      }, {
+        "id" : "6",
+        "x" : 908,
+        "y" : 858
+      }, {
+        "id" : "7",
+        "x" : 908,
+        "y" : 2108
+      }, {
+        "id" : "15",
+        "x" : 908,
+        "y" : 2708
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "Containers",
+      "order" : 2,
+      "paperSize" : "A4_Portrait",
+      "relationships" : [ {
+        "id" : "19"
+      }, {
+        "id" : "20",
+        "vertices" : [ {
+          "x" : 650,
+          "y" : 1008
+        } ]
+      }, {
+        "id" : "21"
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "37",
+        "vertices" : [ {
+          "x" : 1508,
+          "y" : 1808
+        }, {
+          "x" : 1508,
+          "y" : 754
+        } ]
+      } ],
+      "softwareSystemId" : "4"
+    } ],
+    "deploymentViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Le diagramme de déploiement en environnement de développement du site de billetterie.",
+      "dimensions" : {
+        "height" : 1796,
+        "width" : 2730
+      },
+      "elements" : [ {
+        "id" : "38",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "39",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "40",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "41",
+        "x" : 1889,
+        "y" : 259
+      }, {
+        "id" : "42",
+        "x" : 1139,
+        "y" : 259
+      }, {
+        "id" : "43",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "44",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "45",
+        "x" : 239,
+        "y" : 1113
+      }, {
+        "id" : "47",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "48",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "49",
+        "x" : 1139,
+        "y" : 1113
+      }, {
+        "id" : "51",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "52",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "53",
+        "x" : 2039,
+        "y" : 1113
+      } ],
+      "environment" : "Env de developpement",
+      "key" : "Dev",
+      "order" : 4,
+      "relationships" : [ {
+        "id" : "46"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "54",
+        "vertices" : [ {
+          "x" : 1739,
+          "y" : 872
+        } ]
+      } ],
+      "softwareSystemId" : "4"
+    } ],
+    "systemContextViews" : [ {
+      "animations" : [ {
+        "elements" : [ "4" ],
+        "order" : 1
+      }, {
+        "elements" : [ "1" ],
+        "order" : 2,
+        "relationships" : [ "16" ]
+      }, {
+        "elements" : [ "2" ],
+        "order" : 3,
+        "relationships" : [ "17" ]
+      }, {
+        "elements" : [ "3" ],
+        "order" : 4,
+        "relationships" : [ "18", "19" ]
+      } ],
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Le diagramme de contexte système du site de billetterie.",
+      "dimensions" : {
+        "height" : 2000,
+        "width" : 1600
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 634,
+        "y" : 199
+      }, {
+        "id" : "2",
+        "x" : 200,
+        "y" : 1499
+      }, {
+        "id" : "3",
+        "x" : 950,
+        "y" : 1499
+      }, {
+        "id" : "4",
+        "x" : 271,
+        "y" : 899
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "SystemContext",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "16"
+      }, {
+        "id" : "17"
+      }, {
+        "id" : "18"
+      }, {
+        "id" : "19"
+      } ],
+      "softwareSystemId" : "4"
+    } ]
+  }
+}

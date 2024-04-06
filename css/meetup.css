@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Pirulen';
+    src: url('../fonts/pirulen.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --r-background-color: #e7e7e7;
+    --r-main-color: #012d3f;
+    --r-main-font: 'Open Sans';
+}
+
+.reveal h2 {
+    font-family: 'Pirulen';
+}
+
+.slide-background.part1::before,
+.slide-background.part2::before,
+.slide-background.part3::before,
+.slide-background.part4::before,
+.slide-background.part5::before,
+.slide-background.part6::before,
+.slide-background.part7::before,
+.slide-background.part8::before,
+.slide-background.part9::before,
+.slide-background.part10::before,
+.slide-background.part11::before,
+.slide-background.part12::before {
+    font-family: 'Pirulen';
+    position: fixed;
+    font-size: 120%;
+    top: 7%;
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    color: black;
+    border: 2px solid #745d4880;
+    background-color: #10b497;
+}
+
+.slide-background.part1::before {
+    content: "1. Introduction et Objectifs";
+}
+
+.slide-background.part2::before {
+    content: "2. Contraintes d’architecture";
+}
+
+.slide-background.part3::before {
+    content: "3. Contexte et périmètre";
+}
+
+.slide-background.part4::before {
+    content: "4. Stratégie de solution";
+}
+
+.slide-background.part5::before {
+    content: "5. Vue en boîtes";
+}
+
+.slide-background.part6::before {
+    content: "6. Vue exécution";
+}
+
+.slide-background.part7::before {
+    content: "7. Vue déploiement";
+}
+
+.slide-background.part8::before {
+    content: "8. Concepts transversaux";
+}
+
+.slide-background.part9::before {
+    content: "9. Décisions d’architecture";
+}
+
+.slide-background.part10::before {
+    content: "10. Critères de qualité";
+}
+
+.slide-background.part11::before {
+    content: "11. Risques et Dettes techniques";
+}
+
+.slide-background.part12::before {
+    content: "12. Glossaire";
+}
+
+body::after {
+    content: url("../images/devoxx2024_black.png");
+    position: fixed;
+    right: -240px;
+    top: -4%;
+    transform: scale(.5);
+}
+
+.title>.slide-background-content {
+    filter: blur(2px) brightness(200%);
+    opacity: 0.3;
+}
+
+.reveal ul {
+    list-style-type: none;
+}
+
+.columns .slide-content>.column>img {
+    padding: 0;
+}
+
+.reveal h1 {
+    font-family: 'Pirulen';
+    font-size: 65px;
+}
+
+.img-radius img {
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.nomargin img {
+    margin: 0;
+}
+
+.green {
+    color: #10b497;
+}
+
+table.tableblock {
+    font-size: x-large;
+    border-color: black;
+}
+
+.reveal .bloc {
+    --r-block-margin: 12px;
+    font-size: 28px;
+    padding: 0 0.6em;
+    border-top: 5px solid #10b497;
+    border-bottom: 5px solid #10b497;
+    text-align: left;
+    background: #ffffffa0;
+}
+
+.overline {
+    text-decoration: underline 3px;
+}
+
+.transparency.slide-background.present {
+    filter: blur(3px);
+    opacity: 0.3;
+}
+
+.reveal .progress {
+    height: 10px;
+    color: #10b497;
+}
+
+.reveal .controls {
+    color: #10b497;
+}

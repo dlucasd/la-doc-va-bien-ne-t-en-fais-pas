@@ -1,0 +1,54 @@
+== 9. Décisions d'architecture
+
+[%notitle.part9]
+=== Contenu
+
+Décisions architecturales significatives.
+
+[.notes]
+--
+* pourquoi : retracer les décisions. turn over dans les équipes
+* on pense naturellement aux  (Architecture Decision Record)
+--
+
+[%notitle%auto-animate.part9]
+=== ADR
+
+[.bloc]
+--
+[.overline]#*Contexte*#
+
+Problème constaté qui motive la décision ou le changement.
+--
+
+[%notitle%auto-animate.part9]
+=== ADR
+
+[.bloc]
+--
+[.overline]#*Contexte*#
+
+Problème constaté qui motive la décision ou le changement.
+
+[.overline]#*Décision*#
+
+Changement proposé et/ou effectué.
+--
+
+[%notitle%auto-animate.part9]
+=== ADR
+
+[.bloc]
+--
+[.overline]#*Contexte*#
+
+Problème constaté qui motive la décision ou le changement.
+
+[.overline]#*Décision*#
+
+Changement proposé et/ou effectué.
+
+[.overline]#*Statut*#
+
+Proposé, accepté, rejeté, obsolète ...
+--

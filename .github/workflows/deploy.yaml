@@ -1,0 +1,44 @@
+name: Build and Deploy
+on: [push]
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Checkout reveal.js🛎️
+        uses: actions/checkout@v3
+        with:
+          repository: hakimel/reveal.js
+          ref: 4.2.0
+          path: reveal.js
+
+      - name: Build reveal.js🛎️
+        run: npm ci && rm -rf node_modules\
+        working-directory: reveal.js
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        uses: addnab/docker-run-action@v3
+        with:
+          image: asciidoctor/docker-asciidoctor:1.65
+          options: -v ${{ github.workspace }}:/documents
+          run: |
+            asciidoctor-revealjs /documents/index.adoc
+
+      - name: Copy build to folder 📦
+        run: |
+          mkdir -p build/reveal.js/dist && \
+          cp -r *.html images css fonts project build/ && \
+          cp -r reveal.js/dist/* build/reveal.js/dist/ && \
+          cp -r reveal.js/plugin build/reveal.js/
+        working-directory: .
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
+          branch: gh-pages

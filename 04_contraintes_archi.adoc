@@ -1,0 +1,56 @@
+== 2. Contraintes d'architecture
+
+[%notitle.part2]
+=== Contenu
+
+* Contraintes techniques et organisationnelles.
+* Conventions.
+
+[%notitle%auto-animate.part2]
+=== Contraintes
+
+[.bloc]
+--
+[.overline]#*Contraintes et conventions*#
+--
+
+[%notitle%auto-animate.part2]
+=== Contraintes
+
+[.bloc]
+--
+[.overline]#*Contraintes et conventions*#
+
+L'application doit être compatible Firefox, Edge et Chrome.
+--
+
+[%notitle%auto-animate.part2]
+=== Contraintes
+
+[.bloc]
+--
+[.overline]#*Contraintes et conventions*#
+
+L'application doit être compatible Firefox, Edge et Chrome.
+
+L'application doit être déployée sur un serveur Tomcat.
+--
+
+[%notitle%auto-animate.part2]
+=== Contraintes
+
+[.bloc]
+--
+[.overline]#*Contraintes et conventions*#
+
+L'application doit être compatible Firefox, Edge et Chrome.
+
+L'application doit être déployée sur un serveur Tomcat.
+
+Conventions de code, nommage, commit.
+--
+
+[.notes]
+--
+* très intéressant pour les *nouveaux arrivants* d'avoir toutes les conventions au même endroit
+--

@@ -1,0 +1,52 @@
+== 3. Contexte et périmètre
+
+[%notitle.part3]
+=== Contenu
+
+* Contexte et périmètre du système.
+* Interfaces externes.
+
+[.notes]
+--
+* vue très *macro* du système
+* représentation conseillée : un *diagramme de contexte*
+* compréhensible par un *non-technicien*
+--
+
+[%notitle.part3]
+=== Outils de modélisation
+
+[.step]
+* Visio
+* draw.io
+* C4 model [.fragment]#- Créé par Simon Brown#
+
+[.notes]
+--
+* visio et draw.io ont selon des *inconvénients*
+* je vous l'ai dit, *j'aime bien la doc as code* et c'est pourquoi je vais vous parler du *C4 model*
+* créé par Simon Brown il y a une quinzaine d'années
+* Model as code ou *diagram as code*
+* C4 permet de représenter un système sous *plusieurs niveaux abstractions*
+* je ne rentre pas dans le détail, on reste sur le *premier niveau* : *contexte système*
+--
+
+[%notitle%auto-animate.part3.is-vcentered]
+=== Diagramme de contexte système
+
+[.img-radius]
+image::images/context.svg[width=40%]
+
+[%notitle%auto-animate.part3.columns.is-vcentered]
+=== Diagramme de contexte système
+
+[.img-radius.column.is-one-fifths]
+image::images/context.svg[]
+
+[.img-radius.column.is-four-fifths]
+image::images/context-puml.png[]
+
+[.notes]
+--
+* c'est du *plantUML*
+--

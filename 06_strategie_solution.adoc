@@ -1,0 +1,22 @@
+== 4. Stratégie de solution
+
+[%notitle.part4]
+=== Contenu
+
+Décisions fondamentales façonnant l'architecture du système.
+
+[%notitle.part4]
+=== Décision
+
+[.step]
+--
+[%autowidth]
+|===
+|*Objectif* |*Scénario* |*Solution* |*Détail* 
+
+|Performance
+|Fort trafic sur le site
+|File d'attente à l'achat
+|Lien vers l'étude
+|===
+--

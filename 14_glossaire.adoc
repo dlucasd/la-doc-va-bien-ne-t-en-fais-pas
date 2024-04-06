@@ -1,0 +1,37 @@
+== 12. Glossaire
+
+[%notitle.part12]
+=== Contenu
+
+Termes techniques et métier importants.
+
+[.notes]
+--
+* but : toutes les parties prenantes partagent un langage commun
+* traduction de référence dans un environnement multi-langues 
+--
+
+[%notitle%auto-animate.part12]
+=== Glossaire
+
+[.bloc]
+--
+[.overline]#*Glossaire*#
+--
+
+[%notitle%auto-animate.part12]
+=== Glossaire
+
+[.bloc]
+--
+[.overline]#*Glossaire*#
+
+Billet : Donnant entrée, accès quelque part.
+
+API de paiement : Interface permettant la gestion de transactions financières.
+--
+
+[.notes]
+--
+* si le temps le permet, évoquer la génération de glossaire (cf livre de Cyrille Martraire)
+--
