@@ -1,0 +1,15 @@
+@startuml
+
+!include <C4/C4_Context>
+
+Person(client, "Client", "Utilisateur souhaitant acheter des billets pour les JO.")
+System(billetterie, "Système de billetterie", "Permet d'acheter des billets pour les JO.")
+System_Ext(mail, "Système de messagerie", "Gère l'envoi de billets.")
+System_Ext(paiement, "Système de paiement", "Gère les transactions financières.")
+
+Rel(client, billetterie, "Commande de billets")
+Rel(billetterie, mail, "Utilise")
+Rel(billetterie, paiement, "Utilise")
+Rel(mail, client, "Envoi de mails")
+
+@enduml

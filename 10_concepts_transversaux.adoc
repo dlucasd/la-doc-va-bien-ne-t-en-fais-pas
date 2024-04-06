@@ -1,0 +1,40 @@
+== 8. Concepts transversaux
+
+[%notitle.part8]
+=== Contenu
+
+Principales directives transverses à l'application.
+
+[.notes]
+--
+différents sujets dans cette partie
+--
+
+[%notitle.part8]
+=== Exemples
+
+[.step]
+* Packaging, Déploiement
+* Pattern d'architecture
+* Règles d'utilisation de dépendances
+* Observabilité
+* Modèle de données
+
+[%notitle.part8]
+=== SchemaSpy
+
+image::images/schemaspy.png[]
+
+[.notes]
+--
+* on lui fournit une URL de connexion à la base de données
+* compatible avec énormément de bdd
+--
+
+[%notitle,background-iframe="./project/bdd/output/index.html"]
+=== SchemaSpy
+
+[.notes]
+--
+* COMMENT : ce n'est pas du Standard mais implémenté par Oracle et PostgreSQL
+--

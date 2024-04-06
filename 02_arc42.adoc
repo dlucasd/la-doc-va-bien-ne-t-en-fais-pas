@@ -1,0 +1,21 @@
+[%notitle]
+== Application standard
+
+// Credit : icons created by kerismaker - Flaticon
+image:images/archi_standard.svg[]
+
+[%step]
+Billetterie des Jeux Olympiques 2024
+
+[.notes]
+--
+* *architecture standard*
+* il serait *trop long* d'appliquer le template de *manière exhaustive*
+* on va à l'*essentiel* et prendre des *exemples simples*
+* je ne vais *pas détailler l'installation des outils* mais :
+** *simple d'utilisation*
+** *bien documentés*
+** ils ont tous une *CLI*
+** sont *intégrables dans votre CI*
+--
+

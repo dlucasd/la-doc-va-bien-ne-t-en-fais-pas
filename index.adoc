@@ -1,0 +1,32 @@
+= La doc va bien, ne t'en fais pas
+:docinfo: private
+:source-highlighter: highlight.js
+:autofit-option:
+:icons: font
+:revealjs_theme: white
+:revealjs_slideNumber: true
+:revealjs_history: true
+:revealjs_pdfseparatefragments: false
+:title-slide-background-image: images/DevoxxFR2024_0037.jpg
+:title-slide-background-size: fill
+:title-slide-filter: blur(4px)
+:customcss: css/meetup.css
+
+// main color : #10b497
+
+include::01_intro.adoc[]
+include::02_arc42.adoc[]
+include::03_intro_objectifs.adoc[]
+include::04_contraintes_archi.adoc[]
+include::05_contexte_perimetre.adoc[]
+include::06_strategie_solution.adoc[]
+include::07_vue_boites.adoc[]
+include::08_vue_execution.adoc[]
+include::09_vue_deploiement.adoc[]
+include::10_concepts_transversaux.adoc[]
+include::11_adr.adoc[]
+include::12_criteres_qualite.adoc[]
+include::13_risques.adoc[]
+include::14_glossaire.adoc[]
+include::15_recap.adoc[]
+include::16_conclusion.adoc[]

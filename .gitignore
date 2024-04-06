@@ -1,0 +1,5 @@
+reveal.js
+index.html
+.vscode
+!/project/**/index.html
+.idea

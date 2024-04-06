@@ -1,0 +1,11 @@
+sequenceDiagram
+    actor user as Utilisateur
+    participant billetterie as Système de billetterie
+    participant paiement as Système de paiement
+    participant mail as Système d'envoi de mail
+
+    user->>billetterie: Achat de billets
+    billetterie->>paiement: Paiement
+    paiement->>billetterie: Paiement validé
+    billetterie->>mail: Demande d'envoi de billets
+    mail->>user: Envoi de billets

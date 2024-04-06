@@ -1,0 +1,176 @@
+== 5. Vue en boîtes
+
+[%notitle.part5]
+=== Contenu
+
+Décomposition du système en boîtes avec plusieurs niveaux d'abstraction.
+
+[%notitle, background-color="white"]
+=== Model C4
+
+image::images/c4-overview.png[background, size=contain]
+
+[.notes]
+--
+* on a vu précédement *Contexte du système*
+* container = *unité déployable* (pas forcément un conteneur au sens docker)
+* component = Controller, Service, Repository ...
+* code = diagramme de classes
+* 1 problématique C4 :
+** redondance d'infos, exemple : système externe
+* 1 problématique du diagram as code :
+** comment faire quand trop de choses à montrer ?
+* structurizr !
+--
+
+[%notitle%auto-animate.part5]
+=== Structurizr
+
+Structurizr [.fragment]#- Créé par Simon Brown#
+
+[%step]
+--
+[source, bash]
+----
+workspace ... {
+
+    model { ... }
+    views { ... }
+}
+----
+--
+
+[.notes]
+--
+* Simon Brown a créé Structurizr pour résoudre ces deux problèmes
+* Domain-Specific Language
+* 1 seul workspace par projet
+--
+
+[%notitle%auto-animate.part5]
+=== Structurizr
+
+[source, bash, highlight="3..9"]
+----
+workspace ... {
+
+    model { 
+        client = person "Client" ...
+        systemeBilletterie = softwaresystem ... {
+            webApp = container ...
+            apiRest = container ...
+        }
+    }
+    views { ... }
+}
+----
+
+[%notitle%auto-animate.part5]
+=== Structurizr
+
+[source, bash, highlight="7..10"]
+----
+workspace ... {
+
+    model { 
+        client = person "Client" ...
+        systemeBilletterie = softwaresystem ... {
+            webApp = container ...
+            apiRest = container ... {
+                userController = component ...
+                userService = component ...
+            }
+        }
+    }
+    views { ... }
+}
+----
+
+[%notitle%auto-animate.part5]
+=== Structurizr
+
+[source, bash, highlight="7"]
+----
+workspace ... {
+
+    model { 
+        client = person "Client" ...
+        systemeBilletterie = softwaresystem ... 
+
+        client -> systemeBilletterie "Utilise" ...
+    }
+    views { ... }
+}
+----
+
+[%notitle%auto-animate.part5]
+=== Structurizr
+
+[source, bash, highlight="4..11"]
+----
+workspace ... {
+
+    model { ... }
+    views {
+        systemcontext systemeBilletterie "SystemContext" {
+            include *
+        }
+        container systemeBilletterie "Containers" {
+            include *
+        }
+    }
+}
+----
+
+[%notitle.part5]
+=== Structurizr Démo
+
+Démo !
+
+[.notes]
+--
+* https://structurizr.com/dsl
+* réponse aux deux problématiques : 
+** plus de redondances
+** montrer la possibilité d'avoir des vues plus fines
+* diagramme dynamique !
+* zoom sur l'API, zoom sur la SPA ?
+--
+
+[%notitle.part5]
+=== Compodoc
+
+image::images/compodoc.png[]
+
+[%step]
+Vincent Ogloblinsky
+
+[.notes]
+--
+* Créé en 2016 par *Vincent Ogloblinsky*
+* disponible uniquement pour les projets *Angular, Stencil et NestJS*
+* il suffit d'ajouter une dépendance npm à votre projet et de lancer une commande
+--
+
+[%notitle,background-iframe="./project/frontend-billetterie/documentation/index.html"]
+=== Démo Compodoc
+
+[.notes]
+--
+* compodoc à cheval sur de la vue composant (module) / classe (autres boîtes)
+* support i18n
+* pas obligé de tout extraire
+* Themes : basé sur Bootstrap => possibilité de customisé en CSS
+--
+
+[%notitle.part5]
+=== Pas d'Angular ?
+
+Vue.js ? React ? Autre ?
+
+[.notes]
+--
+* *pas d'outil clé en main*
+* il y a des outils pour générer de la *documentation sur les composants* mais ça ne va pas plus loin ...
+* sûrement car Angular propose un *framework complet* et donc facilitant une analyse statique du code
+--

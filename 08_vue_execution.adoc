@@ -1,0 +1,43 @@
+== 6. Vue exécution
+
+[%notitle.part6]
+=== Contenu
+
+Comportement concret des briques du système à travers des scénarios.
+
+[.notes]
+--
+* cas d'utilisation importants
+* interactions avec les interfaces externes
+* administration : lancement, démarrage, arrêt
+* scénario d'erreurs
+--
+
+[%notitle.part6]
+=== Plusieurs formes
+
+Diagrammes :
+
+* d'activités
+* de flux
+* de séquence
+* ...
+
+[%notitle%auto-animate.part6]
+=== Mermaid
+
+image::images/sequence-achat-billet.png[]
+
+[%notitle%auto-animate.columns.is-vcentered.part6]
+=== Mermaid
+
+[.column.is-one-third]
+image::images/sequence-achat-billet.png[]
+
+[.column.is-two-third]
+image::images/sequence-achat-billet-mmd.png[]
+
+[.notes]
+--
+* pas montré, mais on peut générer se type de diagramme avec Structurizr
+--

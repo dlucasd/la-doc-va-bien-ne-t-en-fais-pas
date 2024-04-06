@@ -1,0 +1,71 @@
+== 11. Risques et Dettes techniques
+
+[%notitle.part11]
+=== Contenu
+
+Risques identifiés ou dette technique.
+
+[%notitle%auto-animate.part11]
+=== Risques
+
+[.bloc]
+--
+[.overline]#*Risques*#
+--
+
+[%notitle%auto-animate.part11]
+=== Risques
+
+[.bloc]
+--
+[.overline]#*Risques*#
+
+Dépendance à des services tiers avec risque de panne.
+--
+
+[%notitle%auto-animate.part11]
+=== Risques
+
+[.bloc]
+--
+[.overline]#*Risques*#
+
+Dépendance à des services tiers avec risque de panne.
+
+Mise à l'échelle insuffisante pour gérer le trafic.
+--
+
+[%notitle%auto-animate.part11]
+=== Dette technique
+
+[.bloc]
+--
+[.overline]#*Dette technique*#
+--
+
+[%notitle%auto-animate.part11]
+=== Dette technique
+
+[.bloc]
+--
+[.overline]#*Dette technique*#
+
+Absence de tests automatisés pour le processus d'achat.
+--
+
+[%notitle%auto-animate.part11]
+=== Dette technique
+
+[.bloc]
+--
+[.overline]#*Dette technique*#
+
+Absence de tests automatisés pour le processus d'achat.
+
+Duplication de code dans le service d'envoi de mails.
+--
+
+[.notes]
+--
+* on pourrait mettre un lien vers le Sonar ou une extraction de données
+--
