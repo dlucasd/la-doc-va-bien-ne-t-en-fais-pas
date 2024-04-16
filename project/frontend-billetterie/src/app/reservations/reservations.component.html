@@ -1,0 +1,21 @@
+<h2>My Reservations</h2>
+
+<div>
+  <label for="new-reservation">Reservation name: </label>
+  <input id="new-reservation" #reservation />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(reservation.value); reservation.value=''">
+    Add reservation
+  </button>
+</div>
+
+<ul class="reservations">
+  <li *ngFor="let reservation of reservations">
+    <a routerLink="/detail/{{reservation.id}}">
+      <span class="badge">{{reservation.id}}</span> {{reservation.name}}
+    </a>
+    <button type="button" class="delete" title="delete reservation"
+      (click)="delete(reservation)">x</button>
+  </li>
+</ul>
