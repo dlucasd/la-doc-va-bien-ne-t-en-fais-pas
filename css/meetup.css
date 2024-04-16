@@ -99,7 +99,7 @@ body::after {
     content: url("../images/devoxx2024_black.png");
     position: fixed;
     right: -240px;
-    top: -15px;
+    top: -4%;
     transform: scale(.5);
 }
 
