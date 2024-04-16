@@ -121,11 +121,11 @@ body::after {
     font-size: 65px;
 }
 
-/* .reveal img {
+.img-radius img {
     border: 2px solid #333;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-} */
+}
 
 .nomargin img {
     margin: 0;
@@ -159,17 +159,11 @@ table.tableblock {
     opacity: 0.3;
 }
 
-/*
 .reveal .progress {
     height: 10px;
+    color: #10b497;
 }
 
-.reveal .progress span{
-    background-image: linear-gradient(90deg, rgba(52,109,240,1) 0%, rgba(226,43,41,1) 25%, rgba(23,143,71,1) 50%, rgba(248,176,12,1) 100%);
+.reveal .controls {
+    color: #10b497;
 }
-
-.title > .slide-background-content {
-    filter: blur(3px) brightness(200%);
-    opacity: 0.3;
-}
-*/
