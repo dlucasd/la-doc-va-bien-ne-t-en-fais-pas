@@ -1,0 +1,307 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Billetterie JO 2024 API",
+    "description": "API REST de billetterie pour les JO 2024.",
+    "contact": {
+      "name": "Damien Lucas",
+      "email": "d.lucas@groupeonepoint.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": [
+          "Gestion des utilisateurs"
+        ],
+        "summary": "Créer un utilisateur",
+        "operationId": "createUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Erreur lors de la création",
+            "content": {}
+          },
+          "201": {
+            "description": "Utilisateur créé",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reservations/evenements/{idEvenement}": {
+      "post": {
+        "tags": [
+          "Réservations"
+        ],
+        "summary": "Réserver une place à un événement",
+        "operationId": "reserver",
+        "parameters": [
+          {
+            "name": "idEvenement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "idUtilisateur",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Erreur lors de la réservation",
+            "content": {}
+          },
+          "404": {
+            "description": "Utilisateur ou événement non trouvé"
+          },
+          "200": {
+            "description": "Réservation effectuée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Reservation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/evenements/{idEvenement}": {
+      "post": {
+        "tags": [
+          "Recherche d'événements"
+        ],
+        "summary": "Recherche des événements",
+        "operationId": "getAllEvenements",
+        "parameters": [
+          {
+            "name": "nom",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lieu",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Erreur lors de la recherche",
+            "content": {}
+          },
+          "200": {
+            "description": "Recherche effectuée",
+            "content": {
+              "application/json": {}
+            }
+          },
+          "404": {
+            "description": "Aucun événement trouvé"
+          }
+        }
+      }
+    },
+    "/{id}": {
+      "get": {
+        "tags": [
+          "Recherche d'événements"
+        ],
+        "summary": "Rechercher un événement par id",
+        "operationId": "getEvenementById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "id invalide",
+            "content": {}
+          },
+          "200": {
+            "description": "Evénement trouvé",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Evénement non trouvé"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "tags": [
+          "Gestion des utilisateurs"
+        ],
+        "summary": "Rechercher un utilisateur par id",
+        "operationId": "getUserById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "id invalide",
+            "content": {}
+          },
+          "404": {
+            "description": "Utilisateur non trouvé"
+          },
+          "200": {
+            "description": "Utilisateur trouvé",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reservations/{id}": {
+      "delete": {
+        "tags": [
+          "Réservations"
+        ],
+        "summary": "Annuler une réservation",
+        "operationId": "annulerReservation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Erreur lors de l'annulation",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Réservation non trouvé"
+          },
+          "200": {
+            "description": "Réservation annulée"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Reservation": {
+        "required": [
+          "idEvenement",
+          "idUtilisateur"
+        ],
+        "type": "object",
+        "properties": {
+          "idEvenement": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idUtilisateur": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "User": {
+        "required": [
+          "login",
+          "mail"
+        ],
+        "type": "object",
+        "properties": {
+          "login": {
+            "maxLength": 20,
+            "minLength": 3,
+            "type": "string"
+          },
+          "mail": {
+            "maxLength": 50,
+            "minLength": 5,
+            "type": "string"
+          },
+          "reservations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Reservation"
+            }
+          }
+        }
+      }
+    }
+  }
+}

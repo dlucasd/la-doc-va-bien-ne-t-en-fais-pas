@@ -1,0 +1,675 @@
+= Billetterie JO 2024 API
+d.lucas@groupeonepoint.com
+1.0.0
+:toc: left
+:numbered:
+:toclevels: 4
+:source-highlighter: highlightjs
+:keywords: openapi, rest, Billetterie JO 2024 API
+:specDir: 
+:snippetDir: 
+:generator-template: v1 2019-12-20
+:info-url: https://openapi-generator.tech
+:app-name: Billetterie JO 2024 API
+
+[abstract]
+.Abstract
+API REST de billetterie pour les JO 2024.
+
+
+// markup not found, no include::{specDir}intro.adoc[opts=optional]
+
+
+
+== Endpoints
+
+
+[.GestionDesUtilisateurs]
+=== GestionDesUtilisateurs
+
+
+[.createUser]
+==== createUser
+
+`POST /users`
+
+Créer un utilisateur
+
+===== Description
+
+
+
+
+// markup not found, no include::{specDir}users/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| User
+|  <<User>>
+| X
+| 
+| 
+
+|===
+
+
+
+
+
+===== Return Type
+
+<<User>>
+
+
+===== Content Type
+
+* application/json
+
+===== Responses
+
+.HTTP Response Codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 400
+| Erreur lors de la création
+|  <<>>
+
+
+| 201
+| Utilisateur créé
+|  <<User>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}users/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}users/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :users/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}users/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getUserById]
+==== getUserById
+
+`GET /users/{id}`
+
+Rechercher un utilisateur par id
+
+===== Description
+
+
+
+
+// markup not found, no include::{specDir}users/\{id\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| id
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+<<User>>
+
+
+===== Content Type
+
+* application/json
+
+===== Responses
+
+.HTTP Response Codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 400
+| id invalide
+|  <<>>
+
+
+| 404
+| Utilisateur non trouvé
+|  <<>>
+
+
+| 200
+| Utilisateur trouvé
+|  <<User>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}users/\{id\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}users/\{id\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :users/{id}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}users/\{id\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.RechercheDvnements]
+=== RechercheDvnements
+
+
+[.getAllEvenements]
+==== getAllEvenements
+
+`POST /evenements/{idEvenement}`
+
+Recherche des événements
+
+===== Description
+
+
+
+
+// markup not found, no include::{specDir}evenements/\{idEvenement\}/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| nom
+|  
+| -
+| null
+| 
+
+| lieu
+|  
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+
+-
+
+===== Content Type
+
+* application/json
+
+===== Responses
+
+.HTTP Response Codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 400
+| Erreur lors de la recherche
+|  <<>>
+
+
+| 200
+| Recherche effectuée
+|  <<>>
+
+
+| 404
+| Aucun événement trouvé
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}evenements/\{idEvenement\}/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}evenements/\{idEvenement\}/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :evenements/{idEvenement}/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}evenements/\{idEvenement\}/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.getEvenementById]
+==== getEvenementById
+
+`GET /{id}`
+
+Rechercher un événement par id
+
+===== Description
+
+
+
+
+// markup not found, no include::{specDir}\{id\}/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| id
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+<<User>>
+
+
+===== Content Type
+
+* application/json
+
+===== Responses
+
+.HTTP Response Codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 400
+| id invalide
+|  <<>>
+
+
+| 200
+| Evénement trouvé
+|  <<User>>
+
+
+| 404
+| Evénement non trouvé
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}\{id\}/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}\{id\}/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :{id}/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}\{id\}/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.Rservations]
+=== Rservations
+
+
+[.annulerReservation]
+==== annulerReservation
+
+`DELETE /reservations/{id}`
+
+Annuler une réservation
+
+===== Description
+
+
+
+
+// markup not found, no include::{specDir}reservations/\{id\}/DELETE/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| id
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+
+
+
+===== Return Type
+
+
+
+-
+
+===== Content Type
+
+* */*
+
+===== Responses
+
+.HTTP Response Codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 400
+| Erreur lors de l&#39;annulation
+|  <<String>>
+
+
+| 404
+| Réservation non trouvé
+|  <<>>
+
+
+| 200
+| Réservation annulée
+|  <<>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}reservations/\{id\}/DELETE/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}reservations/\{id\}/DELETE/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :reservations/{id}/DELETE/DELETE.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}reservations/\{id\}/DELETE/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[.reserver]
+==== reserver
+
+`POST /reservations/evenements/{idEvenement}`
+
+Réserver une place à un événement
+
+===== Description
+
+
+
+
+// markup not found, no include::{specDir}reservations/evenements/\{idEvenement\}/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+====== Path Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| idEvenement
+|  
+| X
+| null
+| 
+
+|===
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| idUtilisateur
+|  
+| X
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+<<Reservation>>
+
+
+===== Content Type
+
+* application/json
+
+===== Responses
+
+.HTTP Response Codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 400
+| Erreur lors de la réservation
+|  <<>>
+
+
+| 404
+| Utilisateur ou événement non trouvé
+|  <<>>
+
+
+| 200
+| Réservation effectuée
+|  <<Reservation>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}reservations/evenements/\{idEvenement\}/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}reservations/evenements/\{idEvenement\}/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :reservations/evenements/{idEvenement}/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}reservations/evenements/\{idEvenement\}/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[#models]
+== Models
+
+
+[#Reservation]
+=== _Reservation_ 
+
+
+
+
+[.fields-Reservation]
+[cols="2,1,1,2,4,1"]
+|===
+| Field Name| Required| Nullable | Type| Description | Format
+
+| idEvenement
+| X
+| 
+|   Long  
+| 
+| int64    
+
+| idUtilisateur
+| X
+| 
+|   Long  
+| 
+| int64    
+
+|===
+
+
+
+[#User]
+=== _User_ 
+
+
+
+
+[.fields-User]
+[cols="2,1,1,2,4,1"]
+|===
+| Field Name| Required| Nullable | Type| Description | Format
+
+| login
+| X
+| 
+|   String  
+| 
+|     
+
+| mail
+| X
+| 
+|   String  
+| 
+|     
+
+| reservations
+| 
+| 
+|   List   of <<Reservation>>
+| 
+|     
+
+|===
+
+
+

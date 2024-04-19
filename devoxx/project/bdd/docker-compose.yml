@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  billetterie:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: billetterie
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init-schema.sql:/docker-entrypoint-initdb.d/init-schema.sql
