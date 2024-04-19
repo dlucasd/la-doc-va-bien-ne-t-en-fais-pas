@@ -1,10 +1,19 @@
-name: Build and Deploy
-on: [push]
+name: Build and deploy tag release
+
+on:
+  push:
+    tags:
+      - '*'
+
 permissions:
   contents: write
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -31,15 +40,14 @@ jobs:
 
       - name: Copy build to folder 📦
         run: |
-          mkdir -p build/reveal.js/dist && \
-          cp -r *.html images css fonts project build/ && \
-          cp -r reveal.js/dist/* build/reveal.js/dist/ && \
-          cp -r reveal.js/plugin build/reveal.js/
-        working-directory: .
+          mkdir -p build/${{ github.ref_name }}/reveal.js/dist && \
+          cp -r *.html images css fonts project build/${{ github.ref_name }} && \
+          cp -r reveal.js/dist/* build/${{ github.ref_name }}/reveal.js/dist/ && \
+          cp -r reveal.js/plugin build/${{ github.ref_name }}/reveal.js/
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
-          folder: build # The folder the action should deploy.
+          folder: build
           branch: gh-pages
           clean: false
