@@ -23,7 +23,7 @@
 
 [.notes]
 --
-* visio et draw.io ont selon des *inconvénients*
+* visio et draw.io ont selon moi des *inconvénients*
 * je vous l'ai dit, *j'aime bien la doc as code* et c'est pourquoi je vais vous parler du *C4 model*
 * créé par Simon Brown il y a une quinzaine d'années
 * Model as code ou *diagram as code*

@@ -7,8 +7,8 @@ Termes techniques et métier importants.
 
 [.notes]
 --
-* but : toutes les parties prenantes partagent un langage commun
-* traduction de référence dans un environnement multi-langues 
+* but : toutes les parties prenantes partagent un *langage commun* (ubiquitous language)
+* *traduction de référence* dans un environnement multi-langues 
 --
 
 [%notitle%auto-animate.part12]
@@ -33,5 +33,5 @@ API de paiement : Interface permettant la gestion de transactions financières.
 
 [.notes]
 --
-* si le temps le permet, évoquer la génération de glossaire (cf livre de Cyrille Martraire)
+* *génération de glossaire* via annotations Custom (cf livre de Cyrille Martraire, living documentation)
 --

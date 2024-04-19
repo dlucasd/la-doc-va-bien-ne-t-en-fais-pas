@@ -50,7 +50,7 @@
 
 [.notes]
 --
-* presque la moitié de générée, sans rentrer dans le code, on sort beaucoup d'infos
+* presque la *moitié de générée*, sans voir le code, on sort beaucoup d'infos
 ** peut être fait de manière incrémentale
 ** structurizr permet d'avoir qu'une seule source à maintenir
 * il ne reste plus qu'à distribuer votre documentation

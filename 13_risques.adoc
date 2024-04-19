@@ -67,5 +67,5 @@ Duplication de code dans le service d'envoi de mails.
 
 [.notes]
 --
-* on pourrait mettre un lien vers le Sonar ou une extraction de données
+* on pourrait mettre un *lien vers le Sonar* ou une extraction de données
 --

@@ -104,7 +104,7 @@ image::images/openapi.png[width=70%]
 
 [.notes]
 --
-* il y a d'autres contrat comme api blueprint, raml, ...
+* il y a d'autres contrats comme api blueprint, raml, ...
 * OpenAPI Specification est le plus populaire (anciennement Swagger)
 --
 

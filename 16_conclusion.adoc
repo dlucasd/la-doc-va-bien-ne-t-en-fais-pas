@@ -24,6 +24,6 @@ image::images/qr-code-feedback.svg[width=60%]
 
 [.notes]
 --
-https://app.voxxr.in/events/devoxxfr2024/rate-talk/12552
-https://github.com/dlucasd/la-doc-va-bien-ne-t-en-fais-pas
+* https://app.voxxr.in/events/devoxxfr2024/rate-talk/12552
+* https://github.com/dlucasd/la-doc-va-bien-ne-t-en-fais-pas
 --

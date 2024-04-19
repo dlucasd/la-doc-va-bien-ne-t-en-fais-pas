@@ -7,8 +7,8 @@ Décisions architecturales significatives.
 
 [.notes]
 --
-* pourquoi : retracer les décisions. turn over dans les équipes
-* on pense naturellement aux  (Architecture Decision Record)
+* pourquoi : *retracer* les décisions. *turn over* dans les équipes
+* on pense naturellement aux *ADR* (Architecture Decision Record)
 --
 
 [%notitle%auto-animate.part9]
@@ -51,4 +51,9 @@ Changement proposé et/ou effectué.
 [.overline]#*Statut*#
 
 Proposé, accepté, rejeté, obsolète ...
+--
+
+[.notes]
+--
+* dans le repo, lien github qui recence tout un tas d'exemples d'ADR
 --

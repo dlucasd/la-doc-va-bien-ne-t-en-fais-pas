@@ -26,6 +26,6 @@ image::images/deployment.png[width=80%]
 
 [.notes]
 --
-* fonctionnent mais pas forcément maintenus
-* rappel, open source : vous pouvez contribuer
+* fonctionnent mais *pas forcément maintenus*
+* rappel, *open source* : vous pouvez *contribuer*
 --

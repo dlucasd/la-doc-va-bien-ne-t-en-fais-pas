@@ -7,9 +7,7 @@ Critères de qualité et cas d'utilisation permettant de les évaluer.
 
 [.notes]
 --
-* les critères de qualité ont une influence sur les décisions architecturales
-* sur des petits projets de TMA => je n'ai pas rempli cette partie
-* c'est un template, piochez ce que vous voulez
+* les critères de qualité ont une *influence sur les décisions* architecturales
 --
 
 [%notitle.part10]
@@ -32,4 +30,11 @@ image::images/arbre-qualite.svg[width=60%]
 [.overline]#*Performance*#
 
 Gestion d'au moins 10 000 transactions simultanées lors de la vente de billets tout en répondant aux utilisateurs en moins d'une seconde.
+--
+
+[.notes]
+--
+* le cas est *mesurable*, on peut mettre en place des *tirs de perf* répondant à cela 
+* perso je n'ai que *très peu rempli cette partie*
+* c'est un template, *piochez ce que vous voulez*
 --

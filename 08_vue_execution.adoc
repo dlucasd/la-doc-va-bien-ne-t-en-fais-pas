@@ -8,7 +8,7 @@ Comportement concret des briques du système à travers des scénarios.
 [.notes]
 --
 * cas d'utilisation importants
-* interactions avec les interfaces externes
+* *interactions* avec les interfaces externes
 * administration : lancement, démarrage, arrêt
 * scénario d'erreurs
 --
@@ -40,5 +40,5 @@ image::images/sequence-achat-billet-mmd.png[]
 
 [.notes]
 --
-* pas montré, mais on peut générer se type de diagramme avec Structurizr
+* pas montré, mais on peut générer ce type de diagramme avec Structurizr
 --

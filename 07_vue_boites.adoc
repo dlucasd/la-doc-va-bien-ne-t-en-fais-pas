@@ -16,10 +16,10 @@ image::images/c4-overview.png[background, size=contain]
 * container = *unité déployable* (pas forcément un conteneur au sens docker)
 * component = Controller, Service, Repository ...
 * code = diagramme de classes
-* 1 problématique C4 :
-** redondance d'infos, exemple : système externe
+* 1 problématique C4 liée à la façon d'écrire avec plantUML :
+** *redondance d'infos*, exemple : système externe
 * 1 problématique du diagram as code :
-** comment faire quand trop de choses à montrer ?
+** comment faire quand *trop de choses à montrer* ?
 * structurizr !
 --
 
@@ -157,10 +157,9 @@ Vincent Ogloblinsky
 
 [.notes]
 --
-* compodoc à cheval sur de la vue composant (module) / classe (autres boîtes)
-* support i18n
+* compodoc *à cheval sur de la vue composant* (module) / *classe* (autres boîtes)
 * pas obligé de tout extraire
-* Themes : basé sur Bootstrap => possibilité de customisé en CSS
+* possibilité de générer les infos en JSON ou de récupérer les schémas (svg)
 --
 
 [%notitle.part5]
