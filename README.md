@@ -1,6 +1,6 @@
 # La doc va bien, ne t'en fais pas
 
-## Liste des outils abordés durant ce talk, par ordre d'appartition
+## Liste des outils abordés durant ce talk, par ordre d'apparition
 
 * arc42, template de documentation : https://github.com/arc42
 * Asciidoc, plain text markup language : https://asciidoc.org/
@@ -73,10 +73,15 @@ J'alternerai entre les slides et la présentation des différents outils en live
 * Agrandir le curseur de la souris
 * Zoomer les différents sites au préalable
 
-## Générer les slides
+## Générer les slides en local
 
 ```shell
 docker container run --rm -u $(id -u):$(id -g) -v $(pwd):/documents asciidoctor/docker-asciidoctor:1.65 'asciidoctor-revealjs index.adoc'
 ```
 
 Puis copier reveal.js dans le répertoire.
+
+## Archives
+
+Slides Devoxx France 04/2024 : https://dlucasd.github.io/la-doc-va-bien-ne-t-en-fais-pas/devoxx/
+

@@ -12,7 +12,10 @@
 :title-slide-filter: blur(4px)
 :customcss: css/meetup.css
 
-// main color : #10b497
+// pink color   : #F61C7C
+// orange color : #EF7918
+// blue color   : #03B7D5
+// dark color   : #191919
 
 include::01_intro.adoc[]
 include::02_arc42.adoc[]

@@ -1,25 +1,19 @@
 @font-face {
-    font-family: 'Pirulen';
-    src: url('../fonts/pirulen.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-family: 'Archivo';
+    src: url('../fonts/Archivo-VariableFont_wdth,wght') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 :root {
     --r-background-color: #e7e7e7;
-    --r-main-color: #012d3f;
-    --r-main-font: 'Open Sans';
+    --r-main-color: #191919;
+    --r-main-font: 'Archivo';
+    --r-main-font-size: 38px;
 }
 
 .reveal h2 {
-    font-family: 'Pirulen';
+    font-family: 'Archivo';
 }
 
 .slide-background.part1::before,
@@ -34,7 +28,7 @@
 .slide-background.part10::before,
 .slide-background.part11::before,
 .slide-background.part12::before {
-    font-family: 'Pirulen';
+    font-family: 'Archivo';
     position: fixed;
     font-size: 120%;
     top: 7%;
@@ -43,8 +37,8 @@
     padding-bottom: 10px;
     width: 100%;
     color: black;
-    border: 2px solid #745d4880;
-    background-color: #10b497;
+    border: 2px solid #191919;
+    background-color: #03B7D5;
 }
 
 .slide-background.part1::before {
@@ -96,10 +90,10 @@
 }
 
 body::after {
-    content: url("../images/devoxx2024_black.png");
+    content: url("../images/logodfl.svg");
     position: fixed;
-    right: -240px;
-    top: -4%;
+    left: -5%;
+    bottom: 0;
     transform: scale(.5);
 }
 
@@ -117,8 +111,8 @@ body::after {
 }
 
 .reveal h1 {
-    font-family: 'Pirulen';
-    font-size: 65px;
+    font-family: 'Archivo';
+    font-size: 60px;
 }
 
 .img-radius img {
@@ -132,7 +126,7 @@ body::after {
 }
 
 .green {
-    color: #10b497;
+    color: #03B7D5;
 }
 
 table.tableblock {
@@ -144,8 +138,8 @@ table.tableblock {
     --r-block-margin: 12px;
     font-size: 28px;
     padding: 0 0.6em;
-    border-top: 5px solid #10b497;
-    border-bottom: 5px solid #10b497;
+    border-top: 5px solid #03B7D5;
+    border-bottom: 5px solid #03B7D5;
     text-align: left;
     background: #ffffffa0;
 }
@@ -161,9 +155,9 @@ table.tableblock {
 
 .reveal .progress {
     height: 10px;
-    color: #10b497;
+    color: #EF7918;
 }
 
 .reveal .controls {
-    color: #10b497;
+    color: #F61C7C;
 }
