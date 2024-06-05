@@ -134,6 +134,7 @@ Démo !
 ** plus de redondances
 ** montrer la possibilité d'avoir des vues plus fines
 * diagramme dynamique !
+* tutoriels sur le site sortis il y a quelques jours
 * zoom sur l'API, zoom sur la SPA ?
 --
 
