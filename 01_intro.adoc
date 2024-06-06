@@ -1,7 +1,7 @@
 [%notitle]
 == Intro
 
-image::images/robot_livre.png[background, size=content]
+image::images/livres.jpg[background, size=content]
 
 [.notes]
 --
@@ -60,7 +60,7 @@ image::images/github-arc42.png[background, size=contain]
 === Présentation
 
 [.blur]
-image::images/DevoxxFR2024_0015.jpg[background, size=fill]
+image::images/lille.jpg[background, size=fill]
 
 [.column.is-two-fifth]
 --
@@ -82,7 +82,9 @@ Architecte
 image:images/onepoint.png[width=200]
 
 [.vertical-align-middle]
-icon:github[] @dlucasd
+icon:github[] dlucasd
+
+icon:twitter[] dlucasd_
 
 ****
 

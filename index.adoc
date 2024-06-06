@@ -7,7 +7,7 @@
 :revealjs_slideNumber: true
 :revealjs_history: true
 :revealjs_pdfseparatefragments: false
-:title-slide-background-image: images/DevoxxFR2024_0037.jpg
+:title-slide-background-image: images/lille.jpg
 :title-slide-background-size: fill
 :title-slide-filter: blur(4px)
 :customcss: css/meetup.css

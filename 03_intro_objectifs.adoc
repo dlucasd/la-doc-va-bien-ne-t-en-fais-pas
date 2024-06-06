@@ -225,6 +225,7 @@ Pas d'API REST ?
 * Javadoc
 * JSDoc
 * Asciidoclet, Javadoc avec la *syntaxe Asciidoc* pour apporter plus de *richesse et* de *lisibilité*
+* JEP 467 : markdown pour écrire la Javadoc, sorti Java23
 * *attention*, je ne dis pas qu'il faut utiliser ces outils, certaines personnes considèrent que ça peut *polluer ou alourdir le code*
 * à vous de voir avec votre équipe
 --
