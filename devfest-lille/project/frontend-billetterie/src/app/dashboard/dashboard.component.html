@@ -1,0 +1,9 @@
+<h2>Top Reservations</h2>
+<div class="reservations-menu">
+  <a *ngFor="let reservation of reservations"
+      routerLink="/detail/{{reservation.id}}">
+      {{reservation.name}}
+  </a>
+</div>
+
+<app-reservation-search></app-reservation-search>
