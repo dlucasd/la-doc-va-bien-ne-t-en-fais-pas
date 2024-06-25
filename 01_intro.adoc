@@ -1,7 +1,7 @@
 [%notitle]
 == Intro
 
-image::images/livres.jpg[background, size=content]
+image::images/luke.webp[background, size=content]
 
 [.notes]
 --

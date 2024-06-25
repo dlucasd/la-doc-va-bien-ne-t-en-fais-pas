@@ -7,15 +7,13 @@
 :revealjs_slideNumber: true
 :revealjs_history: true
 :revealjs_pdfseparatefragments: false
-:title-slide-background-image: images/lille.jpg
-:title-slide-background-size: fill
-:title-slide-filter: blur(4px)
+:title-slide-background-image: images/Death-Star-Owner-Manual-Elevation-Plan.webp
+:title-slide-background-size: 90%
 :customcss: css/meetup.css
 
-// pink color   : #F61C7C
-// orange color : #EF7918
-// blue color   : #03B7D5
-// dark color   : #191919
+// purple color : #8E3089
+// orange color : #DD7927
+// yellow color : #E1E04E
 
 include::01_intro.adoc[]
 include::02_arc42.adoc[]

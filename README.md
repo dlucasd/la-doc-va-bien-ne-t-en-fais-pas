@@ -84,4 +84,5 @@ Puis copier reveal.js dans le répertoire.
 ## Archives
 
 Slides Devoxx France 04/2024 : https://dlucasd.github.io/la-doc-va-bien-ne-t-en-fais-pas/devoxx/
+Slides DevFest Lille 06/2024 : https://dlucasd.github.io/la-doc-va-bien-ne-t-en-fais-pas/devfest-lille/
 

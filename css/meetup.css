@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Archivo';
-    src: url('../fonts/Archivo-VariableFont_wdth,wght') format('truetype');
+    font-family: 'Starjedi';
+    src: url('../fonts/Starjedi.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -8,12 +8,7 @@
 :root {
     --r-background-color: #e7e7e7;
     --r-main-color: #191919;
-    --r-main-font: 'Archivo';
     --r-main-font-size: 38px;
-}
-
-.reveal h2 {
-    font-family: 'Archivo';
 }
 
 .slide-background.part1::before,
@@ -28,7 +23,6 @@
 .slide-background.part10::before,
 .slide-background.part11::before,
 .slide-background.part12::before {
-    font-family: 'Archivo';
     position: fixed;
     font-size: 120%;
     top: 7%;
@@ -38,7 +32,7 @@
     width: 100%;
     color: black;
     border: 2px solid #191919;
-    background-color: #03B7D5;
+    background-color: #DD7927;
 }
 
 .slide-background.part1::before {
@@ -90,15 +84,15 @@
 }
 
 body::after {
-    content: url("../images/logodfl.svg");
+    content: url("../images/breizh-camp-logo.svg");
     position: fixed;
-    left: -5%;
-    bottom: 0;
-    transform: scale(.5);
+    left: -300px;
+    bottom: -80px;
+    transform: scale(0.3);
 }
 
 .title>.slide-background-content {
-    filter: blur(2px) brightness(200%);
+    filter: blur(2px) brightness(100%);
     opacity: 0.3;
 }
 
@@ -111,8 +105,9 @@ body::after {
 }
 
 .reveal h1 {
-    font-family: 'Archivo';
+    font-family: 'Starjedi';
     font-size: 60px;
+    text-transform: none;
 }
 
 .img-radius img {
@@ -126,7 +121,7 @@ body::after {
 }
 
 .green {
-    color: #03B7D5;
+    color: #8E3089;
 }
 
 table.tableblock {
@@ -138,8 +133,8 @@ table.tableblock {
     --r-block-margin: 12px;
     font-size: 28px;
     padding: 0 0.6em;
-    border-top: 5px solid #03B7D5;
-    border-bottom: 5px solid #03B7D5;
+    border-top: 5px solid #8E3089;
+    border-bottom: 5px solid #8E3089;
     text-align: left;
     background: #ffffffa0;
 }
@@ -155,9 +150,9 @@ table.tableblock {
 
 .reveal .progress {
     height: 10px;
-    color: #EF7918;
+    color: #8E3089;
 }
 
 .reveal .controls {
-    color: #F61C7C;
+    color: #E1E04E;
 }
